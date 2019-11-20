@@ -1,0 +1,12 @@
+import pandas as pd
+
+# 讀取csv檔案
+p = pd.read_csv('aa.csv')
+# 統計資料共有幾筆
+count = p.shape[0]
+# 取第0筆資料成為物件
+ss = p.loc[0, :]
+print(ss.index) # 取出標題文字
+print(ss.values)# 取出內容值
+# 取出某筆資料內某標題的值(values)
+ss['標題']

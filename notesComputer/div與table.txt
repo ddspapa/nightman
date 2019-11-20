@@ -1,0 +1,102 @@
+  <!-- 註解 -->
+# DIV (區塊) 如果設置了格式屬性其中的table屬性會失效
+    <div id="自訂" class="自訂" style="自訂">區塊內容</div>
+    style="border:2px orange solid;
+    font-size:13px;
+    background-color:orange; (solid實線 dashed虛線)
+    padding:5px;
+    text-align:center; (置中 right靠右)
+# span 標籤也經常被來來做一些網頁元件的樣式控制，通常搭配div，不能設定長寬
+    <span id="" class="" style="">把區塊內容放在這裡</span>
+    <br> 換行
+    <span style="background-color:#FF8282;">第一行</span><br>
+    <span style="background-color:#FFD382;">第二行</span><br>
+    屬性
+    style="border:2px red solid;font-size:12px;"
+    background-color:yellow;
+    padding:10px;(內距)
+
+# 表格 table屬性
+    border="線寬"
+    文字與邊框距離(內距)
+    cellpadding=" (px)"
+    也可在<td>內用CSS padding
+    <td style="padding:8px;">
+
+    合併上下兩行
+    <table border="1" cellpadding="5" style="border:2px #26FF26 solid;text-align:center;">
+    <tr><td rowspan="2">使用 rowspan 的欄位</td><td>表格欄位</td></tr>
+    <tr><td>表格欄位</td></tr>
+
+    合併左右兩列
+    <table border="1" cellpadding="5" style="border:2px #26FF26 solid;text-align:center;">
+    <tr><td colspan="2">使用了 colspan 的欄位</td></tr>
+    <tr><td>表格欄位</td><td>表格欄位</td></tr>
+
+# IMG
+    <img src="#" alt="圖片失效就顯示這段文字" title="滑鼠移上來就看得到文字" style="border:1px black solid;">
+    border="0"將邊框設為"0"才能保整所有聯覽器不回自己生出邊框
+    width="寬度值(px或%)" height="高度值(px或%)" 只設寬度回以強制比列縮放， 若加上高度則會以各自的設定調整
+
+
+
+## id與class (我簡單的理解id是唯一的給單一標籤使用，class是群組的給乙個共同類別的標籤使用像物件)
+    id
+    <p id=”footer”>這是用 ID 選擇器的例子。</p>
+
+    1.每個HTML元素都可以使用id屬性。
+    2.它的作用是在頁面的所有元素中，將某個元素獨立辨識出來。
+    3.他的值必須以字母或下滑線做開頭(不能使用數字或任何字元）
+    4.同一個頁面上的兩個元素不能有相同的id屬性值（否則該值就不是唯一）
+    5.透過js，id屬性可以讓程式碼與該特定元素互動。
+    6.id屬性是全域屬性（global attribute），因為他可以用在任何元素上
+
+    class屬性
+    <p class=”applylarge applyred”>這是多重 Class 的例子(一個標籤設兩個class)。</p>
+
+    1.每個HTML元素都可以使用class屬性。
+    2.有時候你想做的並非獨立識別文件中的單一元素，而是將幾個元素從其他元素中獨立出來。
+    3.在任何元素上的class屬性都可以共用相同的值
+
+    CSS 的 class 和 id 兩者有何差異？
+    這兩者最大的不同，是在於 ID 選擇器在一個 HTML 文件中只能被使用一次，而 Class 選擇器在一個 HTML 文件中可以被使用多次。第二個不同的地方，是 ID 選擇器可以被 Javascript 中的 GetElementByID 函數所運用，而 Class 選擇器無法被 Javascript 運用到。
+    並沒有什麼固定的規則，來決定什麼時候要用 ID 及什麼時候要用 Class。我們的建議是盡量用 Class，因為這樣子最靈活 (同一個 HTML 文件可以利用這類的選擇器多次)。唯一的例外，是當你要用 Javascript 的 GetElementByID 函數時。在這個情況下，你就應該要用 ID。
+    做到好維護  id给js用，class给css用
+
+    相同
+    Class 名稱及 ID 名稱都是對大小寫敏感的。舉例來說，.classone 及 .ClassOne 是代表兩個不同的 Class 選擇器。
+    對於CSS而言，id和class都是選擇器，唯一不同的地方在於權重不同。
+    同權重:
+
+    !important >  id > class > tag
+
+## CSS 位置
+    position: 位置參數;
+        absolute：絕對位置，當網頁往下拉時，元素也會跟著改變位置，其元素的位置由 top、left、right、bottom 所決定。
+        fixed：元素位置固定，相對於瀏覽器而定位，其元素的位置由 top、left、right、bottom 所決定。
+        relative：相對位置，相對於其它元素的位置，其元素的位置由 top、left、right、bottom 所決定。
+        static：這就是預設值，如果設定 position 為 static，則 top、left、right、bottom 會被忽略。
+        inherit：繼承自父層 position 定位屬性的值。
+
+    範例：
+        <style type="text/css">
+        <!--
+        #DIV_BIG{
+            width:300px;
+            height:200px;
+            background-color:#FFB326;
+            position:relative;
+        }
+        #DIV_SMALL{
+            width:120px;
+            height:100px;
+            background-color:#78FF78;
+            position:absolute;
+            top:20px;   <!-- 畫面的絕對位置 -->
+            left:40px;  <!-- 畫面的絕對位置 -->
+        }
+        -->
+        </style>
+        <div id="DIV_BIG">
+            <div id="DIV_SMALL"></div>
+        </div>
