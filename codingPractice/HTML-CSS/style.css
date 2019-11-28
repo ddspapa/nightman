@@ -1,0 +1,35 @@
+body{margin:0px;}
+
+
+nav{
+	display:flex;border: 1px solid red;
+	
+}
+nav>.logo{
+	flex:none;width:80px;
+	text-align:center;
+	
+	background-color:#ffcccc;
+}
+nav>.head{
+	flex:auto;
+	text-align:center;padding: 5px;
+	font-size:20px;color:white;font-weight:bold;
+	background-color:#003344;
+}
+nav>.user{
+	flex:none;width:100px;
+	background-color:#ccffcc;
+}
+
+main{ /*容器*/
+	display:flex;/*容器要用flexbox需要這行指令*/border: 1px solid red;
+	justify-content:center;/* 容器內的擺放flex-start靠左 center置中 flex-end靠右 */
+	align-items: stretch; /* stretch預設等高 center置中 flex-start靠上 flex-end靠下 */
+	background-color:#cccccc;
+}
+main>.item{ /*項目*/
+	flex:none; /*項目要用flexbox需要這行指令*/
+	width:300px;margin:10px;
+	background-color:#ffcccc;
+}
