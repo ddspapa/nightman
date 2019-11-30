@@ -1,25 +1,73 @@
 body{margin:0px;}
 
-
+/*
 nav{
-	display:flex;border: 1px solid red;
-	
+	display:flex;
+	background-color:#cccccc;
+	border: 1px solid red;
+	width:100%;
+	align-items: center;
+	position: fixed;z-index:1;
+	box-shadow: 0 1px 6px black;
 }
 nav>.logo{
 	flex:none;width:80px;
 	text-align:center;
-	
-	background-color:#ffcccc;
+
 }
 nav>.head{
 	flex:auto;
 	text-align:center;padding: 5px;
-	font-size:20px;color:white;font-weight:bold;
+	font-size:16px;color:white;
+	font-weight:bold;
 	background-color:#003344;
 }
 nav>.user{
-	flex:none;width:100px;
+	flex:none;width:80px;
 	background-color:#ccffcc;
+}
+nav>.logo img{
+	width:35px;
+	padding-top: 1px;
+}
+*/
+#headbar{
+	display:flex;
+	background-color:#cccccc;
+	border: 1px solid red;
+	width:100%;
+	align-items: center;
+	position: fixed;z-index:1;
+	box-shadow: 0 1px 6px black;
+}
+.logo_left{
+	flex:none;width:80px;
+	text-align:center;
+
+}
+.head{
+	flex:auto;
+	text-align:center;padding: 5px;
+	font-size:16px;color:white;
+	font-weight:bold;
+	background-color:#003344;
+}
+.logo_right{
+	flex:none;width:80px;
+	background-color:#ccffcc;
+}
+.logo_left div{
+/*垂直置中div區塊內的物件*/
+
+	display:         flex;
+
+			align-items: center;
+
+			justify-content: center;
+}
+.logo_left div img{
+	width:35px;
+
 }
 
 main{ /*容器*/
@@ -27,6 +75,7 @@ main{ /*容器*/
 	justify-content:center;/* 容器內的擺放flex-start靠左 center置中 flex-end靠右 */
 	align-items: stretch; /* stretch預設等高 center置中 flex-start靠上 flex-end靠下 */
 	background-color:#cccccc;
+	position: relative; top: 48px;
 }
 main>.item{ /*項目*/
 	flex:none; /*項目要用flexbox需要這行指令*/
