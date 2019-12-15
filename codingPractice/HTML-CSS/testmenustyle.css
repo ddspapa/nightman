@@ -1,3 +1,6 @@
+html, body {
+    height: 100%;
+}
 body{margin:0px;
 	font-family:"微軟正黑體";
 }
@@ -21,7 +24,7 @@ body{margin:0px;
 	text-align:center;padding: 3px;
 	font-size:16px;color:white;
 	font-weight:bold;
-	background-color:#003344;
+	background-color:#263351;
 }
 .logo_right{
 	flex:none;width:80px;
@@ -34,13 +37,19 @@ body{margin:0px;
 	justify-content: center;
 }
 
-#mainbody{
+#content{
 	display:flex;/*容器要用flexbox需要這行指令*/border: 1px solid red;
 	justify-content:center;/* 容器內的擺放flex-start靠左 center置中 flex-end靠右 */
 	align-items: stretch; /* stretch預設等高 center置中 flex-start靠上 flex-end靠下 */
-	background-color:#cccccc;
-	position: relative; top: 48px;
-	padding: 3px;
+	background-color:#cbcaca;
+	position: relative; top: 87px;
+	padding: 0px;
+	height: 80%;
+}
+iframe{
+	border: 1px solid black;
+	width: 100%;
+	height: 100%;
 }
 /*
 .menuarea{
@@ -52,6 +61,7 @@ body{margin:0px;
 	font-size:16px;
 	font-weight:bold;
 	padding: 15px;
+	text-align:center;
 }
 /*Menu設定從這裡開始
 .nav {
@@ -86,7 +96,7 @@ ul.drop-down-menu > li {
 
  ul.drop-down-menu a {
 	background-color: #fff;
-	color: #333;
+	color: #6d6d6d;
 	display: block;
 	padding: 0 20px;
 	text-decoration: none;
@@ -145,5 +155,10 @@ ul.drop-down-menu li:hover > ul ul { /* 滑鼠滑入之後、次選單之後的�
 
 ul.drop-down-menu ul li:hover > ul { /* 第二層之後的選單展開位置*/
 	left: 90%;
+}
+.aaa{
+	pointer-events: none;/*滑鼠事件失效，auto正常*/
+    cursor: default;/*游標樣式*/
+	opacity: 0.6;/*透明度0.0-1.0*/
 }
 /*Menu設定到這裡結束*/
